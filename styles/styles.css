@@ -33,22 +33,7 @@ body {
   }
 }
 
-/* 4. Plant Grid */
-.plant-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-@media (min-width: 768px) {
-  .plant-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .plant-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+
 
 /* 5. Plant Card Styling */
 .plant-card {
@@ -69,87 +54,113 @@ body {
       animation: spin-slow 6s linear infinite;
     }
 .latest-deals {
-  padding: 4rem 1rem;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+    padding: 4rem 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .deals-heading {
-  font-size: 2rem;
-  font-family: 'Noto Serif', serif;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 .deals-heading .text-orange {
-  color: #f97316; /* Tailwind's orange-600 */
+    color: #f97316;
 }
-
 .deals-sub {
-  font-size: 0.9rem;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
-  line-height: 1.6;
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
 }
-
-/* Grid */
 .deals-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
 }
+@media (min-width: 768px) {
+    .deals-grid {
+        
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 1.5rem; 
+        grid-template-areas:
+            "bloom zabo"
+            "ana zabo";
+    }
 
-/* Card */
+    .deal-card {
+        aspect-ratio: auto; 
+    }
+
+    .deal-bloom {
+        grid-area: bloom;
+    }
+
+    .deal-ana {
+        grid-area: ana;
+    }
+
+    .deal-zabo {
+        grid-area: zabo;
+        grid-row: span 2; 
+    }
+
+    
+    .deal-overlay p {
+        font-size: 1.25rem; 
+    }
+    .deal-overlay button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
 .deal-card {
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  aspect-ratio: 4/3; /* forces consistent image sizing */
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
 }
 
 .deal-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.shop-now{
+    text-decoration: underline;
 }
 
 /* Overlay */
 .deal-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    opacity: 1; 
+    transition: opacity 0.3s ease;
 }
-
-.deal-overlay p {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.deal-overlay button {
-  background: #fff;
-  color: #000;
-  font-size: 0.85rem;
-  padding: 0.4rem 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-.deal-overlay button:hover {
-  background: #f97316;
-  color: #fff;
+@media (max-width: 768px) {
+    .deals-heading {
+        font-size: 1.6rem;
+    }
+    .deals-sub {
+        margin-bottom: 2rem;
+    }
+    .deal-overlay p {
+        font-size: 1rem;
+    }
 }
 
 /* Responsive spacing */

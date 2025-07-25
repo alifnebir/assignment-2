@@ -17,6 +17,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.cart{
+    display: flex;
+}
+.cart:hover{
+    color: #f97316;
+}
 
 /* 3. Banner Grid */
 .banner-grid {
@@ -53,6 +59,8 @@ body {
     .spin-slow {
       animation: spin-slow 6s linear infinite;
     }
+
+    /* 6. Latest deals*/
 .latest-deals {
     padding: 4rem 1rem;
     max-width: 1280px;
@@ -68,6 +76,7 @@ body {
 }
 .deals-heading .text-orange {
     color: #f97316;
+    font-size: larger;
 }
 .deals-sub {
     font-size: 0.9rem;

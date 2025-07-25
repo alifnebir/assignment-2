@@ -19,17 +19,19 @@
         <img src="assets/logo.png" alt="Logo" class="h-16 w-auto" />
       </div>
       <nav class="hidden md:flex items-center gap-x-6 text-sm text-gray-700">
-        <a href="#" class="hover:text-orange-600">Home</a>
-        <a href="#" class="hover:text-orange-600">Shop</a>
-        <a href="#" class="hover:text-orange-600">About</a>
-        <a href="#" class="flex items-center gap-1 hover:text-orange-600">
+        <a href="" class="hover:text-orange-600">Home</a>
+        <a href="" class="hover:text-orange-600">Shop</a>
+        <a href="" class="hover:text-orange-600">About</a>
+        <a href="" class="flex items-center gap-1 hover:text-orange-600">
           <img src="assets/shopping-cart.png" alt="Cart" class="h-5 w-5" />
           <span>Cart ($56)</span>
         </a>
       </nav>
       <div class="md:hidden flex items-center gap-1 text-sm text-gray-700">
-        <img src="assets/shopping-cart.png" alt="Cart" class="h-5 w-5" />
-        <span>Cart ($56)</span>
+        <a class="cart" href="">
+            <img src="assets/shopping-cart.png" alt="Cart" class="h-5 w-5" />
+            <span>Cart ($56)</span>
+        </a>
       </div>
     </div>
   </header>
@@ -105,24 +107,23 @@
         <button onclick="alert('Flower Added to Cart')" class="bg-orange-600 text-white text-sm px-4 py-2 rounded hover:bg-orange-700 transition">ADD TO CART</button>
       </div>
       <div class="bg-white p-4 rounded shadow flex flex-col items-center text-center">
-        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full rounded mb-4" />
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-64 object-cover rounded-md mb-4" />
         <h3 class="font-semibold">Lily Blossom</h3>
         <p class="text-sm font-bold mb-4">20 USD</p>
         <button onclick="alert('Flower Added to Cart')" class="bg-orange-600 text-white text-sm px-4 py-2 rounded hover:bg-orange-700 transition">ADD TO CART</button>
       </div>
       <div class="bg-white p-4 rounded shadow flex flex-col items-center text-center">
-        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full rounded mb-4" />
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-64 object-cover rounded-md mb-4" />
         <h3 class="font-semibold">Lily Blossom</h3>
         <p class="text-sm font-bold mb-4">20 USD</p>
         <button onclick="alert('Flower Added to Cart')" class="bg-orange-600 text-white text-sm px-4 py-2 rounded hover:bg-orange-700 transition">ADD TO CART</button>
       </div>
       <div class="bg-white p-4 rounded shadow flex flex-col items-center text-center">
-        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full rounded mb-4" />
+        <img src="assets/sample-flower-image.png" alt="Plant" class="w-full h-64 object-cover rounded-md mb-4" />
         <h3 class="font-semibold">Lily Blossom</h3>
         <p class="text-sm font-bold mb-4">20 USD</p>
         <button onclick="alert('Flower Added to Cart')" class="bg-orange-600 text-white text-sm px-4 py-2 rounded hover:bg-orange-700 transition">ADD TO CART</button>
       </div>
-      
     </div>
   </section>
 
@@ -146,9 +147,9 @@
     </div>
 
     <!-- Text Content -->
-    <div class="flex-1 text-center lg:text-left">
+    <div class="flex-1 text-left lg:text-left">
       <h2 class="text-heading text-3xl lg:text-4xl font-bold mb-4">
-        Flower & Plants <br>Lover
+      Flower & Plants <br>Lover
       </h2>
       <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 max-w-lg mx-auto lg:mx-0">
         <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
